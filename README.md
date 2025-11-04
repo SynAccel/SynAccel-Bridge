@@ -20,3 +20,10 @@ It acts as the foundation for future research in **automation, robotics, and ada
     "confidence": 0.95
   }
 }
+```
+
+### Next Steps
+
+- Add authentication and logging
+- Experiment with event correlation and adaptive responses
+- Expand to IoT or robotic telemetry integration
