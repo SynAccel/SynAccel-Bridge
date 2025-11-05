@@ -29,7 +29,19 @@ Device or Client  --->  SynAccel-Bridge API  --->  logs/events_log.jsonl
                        (auth + validation)       (timestamped entries)
 ```
 
+### Experiment with event correlation and adaptive responses
+
+| Component              | Description                                                   | Status |
+| ---------------------- | ------------------------------------------------------------- | ------ |
+| **Event Intake (API)** | `/api/event` endpoint using FastAPI, with Pydantic validation | Done |
+| **Authentication**     | Secure API-key system via `.env` + header check               | Done |
+| **Logging**            | Automatic logging to `events_log.jsonl`                       | Done |
+| **Correlation Engine** | Detects repeated intrusions + motion/access_denied sequence   | Done |
+| **Adaptive Responses** | Prints “isolation” or “diagnostic” actions                    | Done |
+| **Cooldown Logic**     | Prevents spammy re-alerts, makes system time-aware            | Done |
+| **Simulated Feed**     | `sensor_simulator.py` continuously generates events           | Done |
+
+
 ### Next Steps
 
-- Experiment with event correlation and adaptive responses
 - Expand to IoT or robotic telemetry integration
