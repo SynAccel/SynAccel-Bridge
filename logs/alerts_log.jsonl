@@ -1,0 +1,36 @@
+{"timestamp": "2025-11-05T15:27:44.734324+00:00", "source": "camA", "type": "intrusion_spike", "severity": "high", "message": "3 intrusion events from camA within short timeframe"}
+{"timestamp": "2025-11-05T15:28:22.105823+00:00", "source": "camA", "type": "intrusion_spike", "severity": "high", "message": "4 intrusion events from camA within short timeframe"}
+{"timestamp": "2025-11-05T15:28:40.150320+00:00", "source": "camA", "type": "intrusion_spike", "severity": "high", "message": "5 intrusion events from camA within short timeframe"}
+{"timestamp": "2025-11-05T15:28:49.425947+00:00", "source": "camA", "type": "intrusion_spike", "severity": "high", "message": "6 intrusion events from camA within short timeframe"}
+{"timestamp": "2025-11-05T15:29:36.701680+00:00", "source": "camA", "type": "intrusion_spike", "severity": "high", "message": "7 intrusion events from camA within short timeframe"}
+{"timestamp": "2025-11-05T15:48:20.217565+00:00", "source": "camA", "type": "intrusion_spike", "severity": "high", "message": "7 intrusion events from camA within short timeframe"}
+{"timestamp": "2025-11-05T15:48:24.273529+00:00", "source": "camA", "type": "intrusion_spike", "severity": "high", "message": "7 intrusion events from camA within short timeframe"}
+{"timestamp": "2025-11-05T15:48:29.287212+00:00", "source": "camA", "type": "intrusion_spike", "severity": "high", "message": "7 intrusion events from camA within short timeframe"}
+{"timestamp": "2025-11-05T15:48:32.298760+00:00", "source": "camA", "type": "intrusion_spike", "severity": "high", "message": "7 intrusion events from camA within short timeframe"}
+{"timestamp": "2025-11-05T15:48:34.307506+00:00", "source": "camA", "type": "intrusion_spike", "severity": "high", "message": "7 intrusion events from camA within short timeframe"}
+{"timestamp": "2025-11-05T15:48:36.318437+00:00", "source": "camA", "type": "intrusion_spike", "severity": "high", "message": "7 intrusion events from camA within short timeframe"}
+{"timestamp": "2025-11-05T15:48:36.318437+00:00", "source": "simSensor-01", "type": "sequence_alert", "severity": "medium", "message": "Motion followed by access_denied on simSensor-01"}
+{"timestamp": "2025-11-05T15:48:39.328778+00:00", "source": "camA", "type": "intrusion_spike", "severity": "high", "message": "7 intrusion events from camA within short timeframe"}
+{"timestamp": "2025-11-05T15:48:39.328778+00:00", "source": "simSensor-01", "type": "sequence_alert", "severity": "medium", "message": "Motion followed by access_denied on simSensor-01"}
+{"timestamp": "2025-11-05T15:48:42.337795+00:00", "source": "camA", "type": "intrusion_spike", "severity": "high", "message": "7 intrusion events from camA within short timeframe"}
+{"timestamp": "2025-11-05T15:48:42.337795+00:00", "source": "simSensor-01", "type": "sequence_alert", "severity": "medium", "message": "Motion followed by access_denied on simSensor-01"}
+{"timestamp": "2025-11-05T15:48:47.343460+00:00", "source": "camA", "type": "intrusion_spike", "severity": "high", "message": "7 intrusion events from camA within short timeframe"}
+{"timestamp": "2025-11-05T15:48:47.343460+00:00", "source": "simSensor-01", "type": "sequence_alert", "severity": "medium", "message": "Motion followed by access_denied on simSensor-01"}
+{"timestamp": "2025-11-05T15:48:49.350584+00:00", "source": "camA", "type": "intrusion_spike", "severity": "high", "message": "7 intrusion events from camA within short timeframe"}
+{"timestamp": "2025-11-05T15:48:49.350584+00:00", "source": "simSensor-01", "type": "sequence_alert", "severity": "medium", "message": "Motion followed by access_denied on simSensor-01"}
+{"timestamp": "2025-11-05T15:48:53.355437+00:00", "source": "camA", "type": "intrusion_spike", "severity": "high", "message": "7 intrusion events from camA within short timeframe"}
+{"timestamp": "2025-11-05T15:48:53.355437+00:00", "source": "simSensor-01", "type": "sequence_alert", "severity": "medium", "message": "Motion followed by access_denied on simSensor-01"}
+{"timestamp": "2025-11-05T15:48:57.365890+00:00", "source": "camA", "type": "intrusion_spike", "severity": "high", "message": "7 intrusion events from camA within short timeframe"}
+{"timestamp": "2025-11-05T15:48:57.365890+00:00", "source": "simSensor-01", "type": "sequence_alert", "severity": "medium", "message": "Motion followed by access_denied on simSensor-01"}
+{"timestamp": "2025-11-05T15:49:00.371141+00:00", "source": "camA", "type": "intrusion_spike", "severity": "high", "message": "7 intrusion events from camA within short timeframe"}
+{"timestamp": "2025-11-05T15:49:00.371141+00:00", "source": "simSensor-01", "type": "sequence_alert", "severity": "medium", "message": "Motion followed by access_denied on simSensor-01"}
+{"timestamp": "2025-11-05T15:49:02.373533+00:00", "source": "camA", "type": "intrusion_spike", "severity": "high", "message": "6 intrusion events from camA within short timeframe"}
+{"timestamp": "2025-11-05T15:49:02.373533+00:00", "source": "simSensor-01", "type": "sequence_alert", "severity": "medium", "message": "Motion followed by access_denied on simSensor-01"}
+{"timestamp": "2025-11-05T15:49:04.382448+00:00", "source": "camA", "type": "intrusion_spike", "severity": "high", "message": "5 intrusion events from camA within short timeframe"}
+{"timestamp": "2025-11-05T15:49:04.382448+00:00", "source": "simSensor-01", "type": "sequence_alert", "severity": "medium", "message": "Motion followed by access_denied on simSensor-01"}
+{"timestamp": "2025-11-05T15:49:09.387040+00:00", "source": "camA", "type": "intrusion_spike", "severity": "high", "message": "4 intrusion events from camA within short timeframe"}
+{"timestamp": "2025-11-05T15:49:09.387040+00:00", "source": "simSensor-01", "type": "sequence_alert", "severity": "medium", "message": "Motion followed by access_denied on simSensor-01"}
+{"timestamp": "2025-11-05T15:49:13.392251+00:00", "source": "camA", "type": "intrusion_spike", "severity": "high", "message": "3 intrusion events from camA within short timeframe"}
+{"timestamp": "2025-11-05T15:49:13.392251+00:00", "source": "simSensor-01", "type": "sequence_alert", "severity": "medium", "message": "Motion followed by access_denied on simSensor-01"}
+{"timestamp": "2025-11-05T15:49:18.400146+00:00", "source": "simSensor-01", "type": "sequence_alert", "severity": "medium", "message": "Motion followed by access_denied on simSensor-01"}
+{"timestamp": "2025-11-05T15:53:59.674632+00:00", "source": "simSensor-01", "type": "intrusion_spike", "severity": "high", "message": "3 intrusion events from simSensor-01 within short timeframe"}
