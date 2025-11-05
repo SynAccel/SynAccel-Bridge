@@ -1,1 +1,46 @@
 {"timestamp": "2025-11-05T04:49:15.063275+00:00", "source": "camera_node_1", "type": "intrusion", "details": {"zone": "loading_bay", "confidence": 0.87}}
+{"timestamp": "2025-11-05T15:27:23.114703+00:00", "source": "camA", "type": "intrusion", "details": {"zone": "lobby"}}
+{"timestamp": "2025-11-05T15:27:35.974145+00:00", "source": "camA", "type": "intrusion", "details": {"zone": "lobby"}}
+{"timestamp": "2025-11-05T15:27:44.733306+00:00", "source": "camA", "type": "intrusion", "details": {"zone": "lobby"}}
+{"timestamp": "2025-11-05T15:28:22.105045+00:00", "source": "camA", "type": "intrusion", "details": {"zone": "lobby"}}
+{"timestamp": "2025-11-05T15:28:40.150320+00:00", "source": "camA", "type": "intrusion", "details": {"zone": "lobby"}}
+{"timestamp": "2025-11-05T15:28:49.425947+00:00", "source": "camA", "type": "intrusion", "details": {"zone": "lobby"}}
+{"timestamp": "2025-11-05T15:29:36.701314+00:00", "source": "camA", "type": "intrusion", "details": {"zone": "lobby"}}
+{"timestamp": "2025-11-05T15:48:20.214370+00:00", "source": "simSensor-01", "type": "intrusion", "details": {"zone": "MainGate", "confidence": 0.83}}
+{"timestamp": "2025-11-05T15:48:24.273159+00:00", "source": "simSensor-01", "type": "access_denied", "details": {"zone": "MainGate", "confidence": 0.99}}
+{"timestamp": "2025-11-05T15:48:29.280312+00:00", "source": "simSensor-01", "type": "door_open", "details": {"zone": "MainGate", "confidence": 0.78}}
+{"timestamp": "2025-11-05T15:48:32.298760+00:00", "source": "simSensor-01", "type": "access_denied", "details": {"zone": "ServerRoom", "confidence": 0.96}}
+{"timestamp": "2025-11-05T15:48:34.305271+00:00", "source": "simSensor-01", "type": "motion", "details": {"zone": "MainGate", "confidence": 0.81}}
+{"timestamp": "2025-11-05T15:48:36.318437+00:00", "source": "simSensor-01", "type": "access_denied", "details": {"zone": "Warehouse", "confidence": 0.79}}
+{"timestamp": "2025-11-05T15:48:39.328778+00:00", "source": "simSensor-01", "type": "intrusion", "details": {"zone": "Warehouse", "confidence": 0.88}}
+{"timestamp": "2025-11-05T15:48:42.336792+00:00", "source": "simSensor-01", "type": "access_denied", "details": {"zone": "ServerRoom", "confidence": 0.96}}
+{"timestamp": "2025-11-05T15:48:47.343460+00:00", "source": "simSensor-01", "type": "motion", "details": {"zone": "MainGate", "confidence": 0.82}}
+{"timestamp": "2025-11-05T15:48:49.350584+00:00", "source": "simSensor-01", "type": "motion", "details": {"zone": "Warehouse", "confidence": 0.74}}
+{"timestamp": "2025-11-05T15:48:53.355437+00:00", "source": "simSensor-01", "type": "motion", "details": {"zone": "MainGate", "confidence": 0.9}}
+{"timestamp": "2025-11-05T15:48:57.364895+00:00", "source": "simSensor-01", "type": "door_open", "details": {"zone": "ServerRoom", "confidence": 0.97}}
+{"timestamp": "2025-11-05T15:49:00.368249+00:00", "source": "simSensor-01", "type": "door_open", "details": {"zone": "Lobby", "confidence": 0.97}}
+{"timestamp": "2025-11-05T15:49:02.373533+00:00", "source": "simSensor-01", "type": "motion", "details": {"zone": "ServerRoom", "confidence": 0.85}}
+{"timestamp": "2025-11-05T15:49:04.381406+00:00", "source": "simSensor-01", "type": "door_open", "details": {"zone": "Lobby", "confidence": 0.99}}
+{"timestamp": "2025-11-05T15:49:09.387040+00:00", "source": "simSensor-01", "type": "motion", "details": {"zone": "MainGate", "confidence": 0.98}}
+{"timestamp": "2025-11-05T15:49:13.392251+00:00", "source": "simSensor-01", "type": "motion", "details": {"zone": "ServerRoom", "confidence": 0.84}}
+{"timestamp": "2025-11-05T15:49:18.398145+00:00", "source": "simSensor-01", "type": "motion", "details": {"zone": "Warehouse", "confidence": 0.82}}
+{"timestamp": "2025-11-05T15:53:29.591057+00:00", "source": "simSensor-01", "type": "motion", "details": {"zone": "ServerRoom", "confidence": 0.8}}
+{"timestamp": "2025-11-05T15:53:32.597284+00:00", "source": "simSensor-01", "type": "door_open", "details": {"zone": "MainGate", "confidence": 0.86}}
+{"timestamp": "2025-11-05T15:53:35.602629+00:00", "source": "simSensor-01", "type": "access_denied", "details": {"zone": "MainGate", "confidence": 0.93}}
+{"timestamp": "2025-11-05T15:53:40.612955+00:00", "source": "simSensor-01", "type": "door_open", "details": {"zone": "MainGate", "confidence": 0.86}}
+{"timestamp": "2025-11-05T15:53:42.617961+00:00", "source": "simSensor-01", "type": "intrusion", "details": {"zone": "Lobby", "confidence": 0.84}}
+{"timestamp": "2025-11-05T15:53:47.627867+00:00", "source": "simSensor-01", "type": "door_open", "details": {"zone": "MainGate", "confidence": 0.89}}
+{"timestamp": "2025-11-05T15:53:49.654096+00:00", "source": "simSensor-01", "type": "access_denied", "details": {"zone": "ServerRoom", "confidence": 0.8}}
+{"timestamp": "2025-11-05T15:53:54.663972+00:00", "source": "simSensor-01", "type": "intrusion", "details": {"zone": "ServerRoom", "confidence": 0.92}}
+{"timestamp": "2025-11-05T15:53:59.672196+00:00", "source": "simSensor-01", "type": "intrusion", "details": {"zone": "Lobby", "confidence": 0.92}}
+{"timestamp": "2025-11-05T15:54:04.685684+00:00", "source": "simSensor-01", "type": "intrusion", "details": {"zone": "Warehouse", "confidence": 0.76}}
+{"timestamp": "2025-11-05T15:54:07.695522+00:00", "source": "simSensor-01", "type": "access_denied", "details": {"zone": "ServerRoom", "confidence": 0.89}}
+{"timestamp": "2025-11-05T15:54:11.713202+00:00", "source": "simSensor-01", "type": "door_open", "details": {"zone": "Warehouse", "confidence": 0.9}}
+{"timestamp": "2025-11-05T15:54:14.716615+00:00", "source": "simSensor-01", "type": "intrusion", "details": {"zone": "ServerRoom", "confidence": 0.77}}
+{"timestamp": "2025-11-05T15:54:16.725430+00:00", "source": "simSensor-01", "type": "door_open", "details": {"zone": "MainGate", "confidence": 0.87}}
+{"timestamp": "2025-11-05T15:54:21.732386+00:00", "source": "simSensor-01", "type": "motion", "details": {"zone": "Warehouse", "confidence": 0.81}}
+{"timestamp": "2025-11-05T15:54:25.734890+00:00", "source": "simSensor-01", "type": "intrusion", "details": {"zone": "Warehouse", "confidence": 0.71}}
+{"timestamp": "2025-11-05T15:54:27.741517+00:00", "source": "simSensor-01", "type": "motion", "details": {"zone": "MainGate", "confidence": 0.88}}
+{"timestamp": "2025-11-05T15:54:31.746401+00:00", "source": "simSensor-01", "type": "door_open", "details": {"zone": "MainGate", "confidence": 0.93}}
+{"timestamp": "2025-11-05T15:54:34.749109+00:00", "source": "simSensor-01", "type": "access_denied", "details": {"zone": "ServerRoom", "confidence": 0.86}}
+{"timestamp": "2025-11-05T15:54:39.753955+00:00", "source": "simSensor-01", "type": "intrusion", "details": {"zone": "Warehouse", "confidence": 0.85}}

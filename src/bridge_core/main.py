@@ -7,6 +7,8 @@ import os
 from datetime import datetime, timezone
 import json
 from pathlib import Path
+from src.intelligence.correlation_engine import correlate_events
+
 
 # ---------- Load environment variables ----------
 load_dotenv()
@@ -46,6 +48,9 @@ class Event(BaseModel):
 def index():
     return {"message": "SynAccel-Bridge API is running"}
 
+recent_events = []
+
+
 @app.post("/api/event")
 async def receive_event(event: Event, authorized: bool = Depends(verify_api_key)):
     """Receive and process a security or sensor event."""
@@ -59,13 +64,25 @@ async def receive_event(event: Event, authorized: bool = Depends(verify_api_key)
 
     logs_dir = Path("logs")
     logs_dir.mkdir(exist_ok=True)
-
     log_file = logs_dir / "events_log.jsonl"
     with open(log_file, "a") as f:
         f.write(json.dumps(log_entry) + "\n")
+        
+    recent_events.append(log_entry)
+    if len(recent_events) > 20:
+        recent_events.pop(0)
+        
+    # --- 3. Run correlation analysis
+    alerts = correlate_events(recent_events)
 
-    return {
-        "received": True,
-        "message": "Event logged successfully",
-        "data": event.dict()
-    }
+    if alerts:
+        alerts_file = logs_dir / "alerts_log.jsonl"
+        with open(alerts_file, "a") as f:
+            for alert in alerts:
+                f.write(json.dumps(alert) + "\n")
+        for a in alerts:
+            print(f"[⚠] {a['severity'].upper()} | {a['message']}")
+
+    # Normal response
+    print(f"[✔] Logged {event.type} from {event.source}")
+    return {"received": True, "alerts_triggered": len(alerts), "data": event.dict()}
