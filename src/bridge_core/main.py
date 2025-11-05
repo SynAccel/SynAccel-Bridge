@@ -8,7 +8,7 @@ from datetime import datetime, timezone
 import json
 from pathlib import Path
 from src.intelligence.correlation_engine import correlate_events
-
+from src.ui.dashboard import router as dashboard_router
 
 # ---------- Load environment variables ----------
 load_dotenv()
@@ -18,6 +18,8 @@ print("Loaded API_KEY:", API_KEY)
 
 # ---------- Create app ----------
 app = FastAPI(title="SynAccel-Bridge API", version="0.1")
+
+app.include_router(dashboard_router)
 
 # ---------- Security system ----------
 api_key_header = APIKeyHeader(name="Authorization", auto_error=False)
