@@ -22,8 +22,14 @@ It acts as the foundation for future research in **automation, robotics, and ada
 }
 ```
 
+### Authentication and Logging
+
+```
+Device or Client  --->  SynAccel-Bridge API  --->  logs/events_log.jsonl
+                       (auth + validation)       (timestamped entries)
+```
+
 ### Next Steps
 
-- Add authentication and logging
 - Experiment with event correlation and adaptive responses
 - Expand to IoT or robotic telemetry integration
