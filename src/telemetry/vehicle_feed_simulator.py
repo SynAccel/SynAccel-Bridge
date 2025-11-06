@@ -1,14 +1,15 @@
-import requests
-import time
-import random
-from datetime import datetime, timezone
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 API_URL = "http://127.0.0.1:8000/api/event"
-API_KEY = "de3c5fd6b3c18ead317e62764b2a9da81643ffebefaa56348c2f46e1f1dc4519"
+API_KEY = os.getenv("API_KEY")        # read from .env
 HEADERS = {
     "Authorization": f"Bearer {API_KEY}",
     "Content-Type": "application/json"
 }
+
 
 VEHICLES = ["uv01", "uv02"]
 
