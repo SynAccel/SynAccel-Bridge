@@ -1,26 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>SynAccel Bridge Dashboard</title>
   <style>
-    body { font-family: Arial, sans-serif; background: #0e1117; color: #e8e8e8; margin: 20px; }
-    h1 { color: #58a6ff; }
-    table { width: 100%; border-collapse: collapse; margin-bottom: 30px; }
-    th, td { padding: 8px 10px; border-bottom: 1px solid #333; text-align: left; }
-    th { color: #58a6ff; }
-    .section { margin-bottom: 40px; }
-    .alert-high { color: #ff4d4d; }
-    .alert-medium { color: #ffae42; }
-    .timestamp { font-size: 0.9em; color: #999; }
+    body {
+      font-family: Arial, sans-serif;
+      background: #0e1117;
+      color: #e8e8e8;
+      margin: 20px;
+    }
+    h1 {
+      color: #58a6ff;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 30px;
+    }
+    th, td {
+      padding: 8px 10px;
+      border-bottom: 1px solid #333;
+      text-align: left;
+    }
+    th {
+      color: #58a6ff;
+    }
+    .section {
+      margin-bottom: 40px;
+    }
+    .alert-high {
+      color: #ff4d4d;
+    }
+    .alert-medium {
+      color: #ffae42;
+    }
+    .timestamp {
+      font-size: 0.9em;
+      color: #999;
+    }
+    /* Status Bar */
+    #status-bar {
+      width: 100%;
+      padding: 12px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.2em;
+      color: #fff;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      transition: background 0.5s ease;
+    }
+    #status-bar.normal {
+      background: #1f8b4c; /* green */
+    }
+    #status-bar.warning {
+      background: #ffae42; /* orange */
+    }
+    #status-bar.alert {
+      background: #d93030; /* red */
+    }
   </style>
-  <meta http-equiv="refresh" content="5"> <!-- auto-refresh every 5 sec -->
 </head>
 <body>
   <h1>SynAccel-Bridge Dashboard</h1>
 
+  <!-- Bridge Status Indicator -->
+  <div id="status-bar" class="normal">Bridge Status: NORMAL</div>
+
   <div class="section">
-    <h2> Recent Events</h2>
+    <h2>Recent Events</h2>
     <table>
       <tr><th>Time (UTC)</th><th>Source</th><th>Type</th><th>Details</th></tr>
       {% for e in events %}
@@ -47,5 +96,92 @@
       {% endfor %}
     </table>
   </div>
+
+  <!-- Live Alerts Panel -->
+  <section id="alerts-section" style="margin-top: 20px;">
+    <h2>Active Alerts (Live Feed)</h2>
+    <table id="alerts-table" border="1" cellspacing="0" cellpadding="6" width="100%">
+      <thead style="background-color: #333; color: white;">
+        <tr>
+          <th>Timestamp</th>
+          <th>Source</th>
+          <th>Type</th>
+          <th>Severity</th>
+          <th>Message</th>
+          <th>LIDAR</th>
+          <th>Speed (kph)</th>
+          <th>Battery (%)</th>
+        </tr>
+      </thead>
+      <tbody id="alerts-body">
+        <tr><td colspan="5">Loading alerts...</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ======= Live Data Script ======= -->
+  <script>
+  async function loadAlerts() {
+    try {
+      const response = await fetch("/api/alerts");
+      const alerts = await response.json();
+      console.log("Fetched alerts:", alerts);
+
+      const tbody = document.getElementById("alerts-body");
+      const statusBar = document.getElementById("status-bar");
+      tbody.innerHTML = "";
+
+      if (alerts.length === 0) {
+        tbody.innerHTML = '<tr><td colspan="5">No active alerts</td></tr>';
+        statusBar.className = "normal";
+        statusBar.textContent = "Bridge Status: NORMAL";
+        return;
+      }
+
+      // Determine the highest severity
+      const severities = alerts.map(a => a.severity.toLowerCase());
+      let status = "normal";
+      if (severities.includes("high")) status = "alert";
+      else if (severities.includes("medium")) status = "warning";
+
+      // Update status bar color and text
+      statusBar.className = status;
+      statusBar.textContent =
+        status === "alert"
+          ? "Bridge Status: ALERT MODE"
+          : status === "warning"
+          ? "Bridge Status: WARNING"
+          : "Bridge Status: NORMAL";
+
+      // Show the last 20 alerts
+      alerts.slice(-20).reverse().forEach(a => {
+        const row = document.createElement("tr");
+        const color =
+          a.severity === "high"
+            ? "rgb(255, 80, 80)"
+            : a.severity === "medium"
+            ? "orange"
+            : "lightgreen";
+
+        row.innerHTML = `
+  <td>${a.timestamp}</td>
+  <td>${a.source}</td>
+  <td>${a.type}</td>
+  <td style="font-weight:bold; color:${color};">${a.severity.toUpperCase()}</td>
+  <td>${a.lidar_status || "N/A"}</td>
+  <td>${a.speed_kph || "N/A"}</td>
+  <td>${a.battery_percent || "N/A"}</td>
+  <td>${a.message}</td>
+`;
+
+    } catch (err) {
+      console.error("Error loading alerts:", err);
+    }
+  }
+
+  // Refresh every 3 seconds
+  setInterval(loadAlerts, 3000);
+  loadAlerts();
+  </script>
 </body>
 </html>

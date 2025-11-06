@@ -44,3 +44,69 @@
 {"timestamp": "2025-11-05T15:54:31.746401+00:00", "source": "simSensor-01", "type": "door_open", "details": {"zone": "MainGate", "confidence": 0.93}}
 {"timestamp": "2025-11-05T15:54:34.749109+00:00", "source": "simSensor-01", "type": "access_denied", "details": {"zone": "ServerRoom", "confidence": 0.86}}
 {"timestamp": "2025-11-05T15:54:39.753955+00:00", "source": "simSensor-01", "type": "intrusion", "details": {"zone": "Warehouse", "confidence": 0.85}}
+{"timestamp": "2025-11-05T20:33:59.529146+00:00", "source": "simSensor-01", "type": "motion", "details": {"zone": "MainGate", "confidence": 0.92}}
+{"timestamp": "2025-11-05T20:34:03.536371+00:00", "source": "simSensor-01", "type": "access_denied", "details": {"zone": "ServerRoom", "confidence": 0.9}}
+{"timestamp": "2025-11-05T20:34:07.544673+00:00", "source": "simSensor-01", "type": "door_open", "details": {"zone": "MainGate", "confidence": 0.94}}
+{"timestamp": "2025-11-06T03:58:46.019748+00:00", "source": "simSensor-01", "type": "intrusion", "details": {"zone": "MainGate", "confidence": 0.74}}
+{"timestamp": "2025-11-06T03:58:50.026923+00:00", "source": "simSensor-01", "type": "motion", "details": {"zone": "MainGate", "confidence": 0.99}}
+{"timestamp": "2025-11-06T03:58:55.035235+00:00", "source": "simSensor-01", "type": "motion", "details": {"zone": "Warehouse", "confidence": 0.84}}
+{"timestamp": "2025-11-06T03:58:57.039480+00:00", "source": "simSensor-01", "type": "access_denied", "details": {"zone": "ServerRoom", "confidence": 0.98}}
+{"timestamp": "2025-11-06T03:59:01.051684+00:00", "source": "simSensor-01", "type": "access_denied", "details": {"zone": "Warehouse", "confidence": 0.88}}
+{"timestamp": "2025-11-06T03:59:03.060819+00:00", "source": "simSensor-01", "type": "intrusion", "details": {"zone": "Warehouse", "confidence": 0.98}}
+{"timestamp": "2025-11-06T03:59:07.065792+00:00", "source": "simSensor-01", "type": "intrusion", "details": {"zone": "Warehouse", "confidence": 0.77}}
+{"timestamp": "2025-11-06T03:59:11.068517+00:00", "source": "simSensor-01", "type": "access_denied", "details": {"zone": "Lobby", "confidence": 0.75}}
+{"timestamp": "2025-11-06T03:59:13.078747+00:00", "source": "simSensor-01", "type": "intrusion", "details": {"zone": "Warehouse", "confidence": 0.96}}
+{"timestamp": "2025-11-06T03:59:18.085165+00:00", "source": "simSensor-01", "type": "intrusion", "details": {"zone": "Warehouse", "confidence": 0.97}}
+{"timestamp": "2025-11-06T03:59:21.090378+00:00", "source": "simSensor-01", "type": "intrusion", "details": {"zone": "ServerRoom", "confidence": 0.72}}
+{"timestamp": "2025-11-06T03:59:26.093567+00:00", "source": "simSensor-01", "type": "door_open", "details": {"zone": "MainGate", "confidence": 0.78}}
+{"timestamp": "2025-11-06T03:59:31.099136+00:00", "source": "simSensor-01", "type": "access_denied", "details": {"zone": "Warehouse", "confidence": 0.9}}
+{"timestamp": "2025-11-06T03:59:34.102102+00:00", "source": "simSensor-01", "type": "motion", "details": {"zone": "Lobby", "confidence": 0.7}}
+{"timestamp": "2025-11-06T03:59:36.113013+00:00", "source": "simSensor-01", "type": "access_denied", "details": {"zone": "MainGate", "confidence": 0.83}}
+{"timestamp": "2025-11-06T03:59:39.120011+00:00", "source": "simSensor-01", "type": "motion", "details": {"zone": "ServerRoom", "confidence": 0.72}}
+{"timestamp": "2025-11-06T16:00:18.075081+00:00", "source": "uv01", "type": "telemetry", "details": {"battery_percent": 80, "lidar_status": "FAIL", "speed_kph": 45}}
+{"timestamp": "2025-11-06T16:00:53.374380+00:00", "source": "uv01", "type": "telemetry", "details": {"battery_percent": 80, "lidar_status": "FAIL", "speed_kph": 45}}
+{"timestamp": "2025-11-06T16:11:28.050974+00:00", "source": "uv01", "type": "telemetry", "details": {"speed_kph": 55.0, "gps": [42.338247, -71.247725], "battery_percent": 90.8, "lidar_status": "OK", "comm_latency_ms": 72.3}}
+{"timestamp": "2025-11-06T16:11:30.090679+00:00", "source": "uv02", "type": "telemetry", "details": {"speed_kph": 45.6, "gps": [42.334975, -71.241372], "battery_percent": 92.5, "lidar_status": "FAIL", "comm_latency_ms": 96.7}}
+{"timestamp": "2025-11-06T16:11:32.113733+00:00", "source": "uv01", "type": "telemetry", "details": {"speed_kph": 33.6, "gps": [42.332887, -71.247872], "battery_percent": 81.7, "lidar_status": "FAIL", "comm_latency_ms": 65.1}}
+{"timestamp": "2025-11-06T16:11:34.137856+00:00", "source": "uv02", "type": "telemetry", "details": {"speed_kph": 40.4, "gps": [42.337516, -71.241273], "battery_percent": 76.3, "lidar_status": "OK", "comm_latency_ms": 45.8}}
+{"timestamp": "2025-11-06T16:11:36.161110+00:00", "source": "uv01", "type": "telemetry", "details": {"speed_kph": 34.6, "gps": [42.336289, -71.246991], "battery_percent": 76.0, "lidar_status": "FAIL", "comm_latency_ms": 78.3}}
+{"timestamp": "2025-11-06T16:11:38.195833+00:00", "source": "uv02", "type": "telemetry", "details": {"speed_kph": 39.9, "gps": [42.331372, -71.246453], "battery_percent": 85.6, "lidar_status": "OK", "comm_latency_ms": 104.9}}
+{"timestamp": "2025-11-06T16:11:40.205844+00:00", "source": "uv01", "type": "telemetry", "details": {"speed_kph": 22.0, "gps": [42.33059, -71.243842], "battery_percent": 83.8, "lidar_status": "FAIL", "comm_latency_ms": 41.1}}
+{"timestamp": "2025-11-06T16:11:42.223541+00:00", "source": "uv02", "type": "telemetry", "details": {"speed_kph": 20.3, "gps": [42.337935, -71.248989], "battery_percent": 77.0, "lidar_status": "FAIL", "comm_latency_ms": 52.1}}
+{"timestamp": "2025-11-06T16:11:44.237497+00:00", "source": "uv01", "type": "telemetry", "details": {"speed_kph": 52.0, "gps": [42.337175, -71.248623], "battery_percent": 76.8, "lidar_status": "OK", "comm_latency_ms": 109.8}}
+{"timestamp": "2025-11-06T16:11:46.255597+00:00", "source": "uv02", "type": "telemetry", "details": {"speed_kph": 37.1, "gps": [42.331895, -71.24711], "battery_percent": 95.5, "lidar_status": "FAIL", "comm_latency_ms": 96.2}}
+{"timestamp": "2025-11-06T16:11:48.272526+00:00", "source": "uv01", "type": "telemetry", "details": {"speed_kph": 43.0, "gps": [42.337864, -71.243438], "battery_percent": 80.5, "lidar_status": "FAIL", "comm_latency_ms": 48.6}}
+{"timestamp": "2025-11-06T16:11:50.297693+00:00", "source": "uv02", "type": "telemetry", "details": {"speed_kph": 46.8, "gps": [42.339099, -71.243532], "battery_percent": 87.7, "lidar_status": "FAIL", "comm_latency_ms": 101.7}}
+{"timestamp": "2025-11-06T16:11:52.329518+00:00", "source": "uv01", "type": "telemetry", "details": {"speed_kph": 25.7, "gps": [42.332914, -71.248778], "battery_percent": 82.6, "lidar_status": "FAIL", "comm_latency_ms": 41.3}}
+{"timestamp": "2025-11-06T16:11:54.356085+00:00", "source": "uv02", "type": "telemetry", "details": {"speed_kph": 37.9, "gps": [42.331438, -71.243256], "battery_percent": 79.8, "lidar_status": "OK", "comm_latency_ms": 105.6}}
+{"timestamp": "2025-11-06T16:11:56.375073+00:00", "source": "uv01", "type": "telemetry", "details": {"speed_kph": 51.4, "gps": [42.338432, -71.249288], "battery_percent": 97.5, "lidar_status": "OK", "comm_latency_ms": 115.9}}
+{"timestamp": "2025-11-06T16:11:58.383482+00:00", "source": "uv02", "type": "telemetry", "details": {"speed_kph": 37.9, "gps": [42.339898, -71.247404], "battery_percent": 96.9, "lidar_status": "FAIL", "comm_latency_ms": 113.9}}
+{"timestamp": "2025-11-06T16:12:00.403317+00:00", "source": "uv01", "type": "telemetry", "details": {"speed_kph": 31.1, "gps": [42.336813, -71.245279], "battery_percent": 76.6, "lidar_status": "OK", "comm_latency_ms": 106.9}}
+{"timestamp": "2025-11-06T16:12:02.419461+00:00", "source": "uv02", "type": "telemetry", "details": {"speed_kph": 21.7, "gps": [42.331792, -71.246621], "battery_percent": 83.2, "lidar_status": "OK", "comm_latency_ms": 99.7}}
+{"timestamp": "2025-11-06T16:12:04.441735+00:00", "source": "uv01", "type": "telemetry", "details": {"speed_kph": 23.7, "gps": [42.337689, -71.249415], "battery_percent": 78.8, "lidar_status": "FAIL", "comm_latency_ms": 55.1}}
+{"timestamp": "2025-11-06T16:12:06.457070+00:00", "source": "uv02", "type": "telemetry", "details": {"speed_kph": 47.6, "gps": [42.331643, -71.244394], "battery_percent": 76.2, "lidar_status": "FAIL", "comm_latency_ms": 103.0}}
+{"timestamp": "2025-11-06T16:12:08.465577+00:00", "source": "uv01", "type": "telemetry", "details": {"speed_kph": 27.4, "gps": [42.333291, -71.243106], "battery_percent": 85.8, "lidar_status": "OK", "comm_latency_ms": 93.8}}
+{"timestamp": "2025-11-06T16:12:10.473326+00:00", "source": "uv02", "type": "telemetry", "details": {"speed_kph": 43.7, "gps": [42.335986, -71.244929], "battery_percent": 83.8, "lidar_status": "OK", "comm_latency_ms": 128.7}}
+{"timestamp": "2025-11-06T16:12:12.516511+00:00", "source": "uv01", "type": "telemetry", "details": {"speed_kph": 49.6, "gps": [42.335416, -71.241291], "battery_percent": 82.3, "lidar_status": "OK", "comm_latency_ms": 44.8}}
+{"timestamp": "2025-11-06T16:12:14.536765+00:00", "source": "uv02", "type": "telemetry", "details": {"speed_kph": 59.3, "gps": [42.330045, -71.246224], "battery_percent": 78.9, "lidar_status": "OK", "comm_latency_ms": 60.1}}
+{"timestamp": "2025-11-06T16:12:16.558297+00:00", "source": "uv01", "type": "telemetry", "details": {"speed_kph": 36.9, "gps": [42.338495, -71.247096], "battery_percent": 88.6, "lidar_status": "FAIL", "comm_latency_ms": 79.2}}
+{"timestamp": "2025-11-06T16:12:18.565820+00:00", "source": "uv02", "type": "telemetry", "details": {"speed_kph": 36.2, "gps": [42.338001, -71.247686], "battery_percent": 78.7, "lidar_status": "OK", "comm_latency_ms": 79.0}}
+{"timestamp": "2025-11-06T16:12:20.593017+00:00", "source": "uv01", "type": "telemetry", "details": {"speed_kph": 52.0, "gps": [42.333674, -71.246675], "battery_percent": 91.7, "lidar_status": "OK", "comm_latency_ms": 107.4}}
+{"timestamp": "2025-11-06T16:12:22.620684+00:00", "source": "uv02", "type": "telemetry", "details": {"speed_kph": 42.6, "gps": [42.338346, -71.246796], "battery_percent": 96.0, "lidar_status": "OK", "comm_latency_ms": 120.1}}
+{"timestamp": "2025-11-06T16:12:24.625889+00:00", "source": "uv01", "type": "telemetry", "details": {"speed_kph": 20.2, "gps": [42.330117, -71.243776], "battery_percent": 98.4, "lidar_status": "OK", "comm_latency_ms": 51.5}}
+{"timestamp": "2025-11-06T16:12:26.644567+00:00", "source": "uv02", "type": "telemetry", "details": {"speed_kph": 55.2, "gps": [42.338885, -71.246763], "battery_percent": 78.0, "lidar_status": "FAIL", "comm_latency_ms": 112.9}}
+{"timestamp": "2025-11-06T16:12:28.663811+00:00", "source": "uv01", "type": "telemetry", "details": {"speed_kph": 47.9, "gps": [42.338139, -71.243988], "battery_percent": 78.6, "lidar_status": "FAIL", "comm_latency_ms": 96.3}}
+{"timestamp": "2025-11-06T16:12:30.686769+00:00", "source": "uv02", "type": "telemetry", "details": {"speed_kph": 40.9, "gps": [42.333572, -71.248069], "battery_percent": 99.4, "lidar_status": "OK", "comm_latency_ms": 121.6}}
+{"timestamp": "2025-11-06T16:12:32.709828+00:00", "source": "uv01", "type": "telemetry", "details": {"speed_kph": 26.6, "gps": [42.330449, -71.248819], "battery_percent": 97.5, "lidar_status": "OK", "comm_latency_ms": 91.7}}
+{"timestamp": "2025-11-06T16:12:34.737330+00:00", "source": "uv02", "type": "telemetry", "details": {"speed_kph": 58.3, "gps": [42.331377, -71.249404], "battery_percent": 83.7, "lidar_status": "OK", "comm_latency_ms": 72.3}}
+{"timestamp": "2025-11-06T16:12:36.764309+00:00", "source": "uv01", "type": "telemetry", "details": {"speed_kph": 53.6, "gps": [42.338324, -71.242924], "battery_percent": 95.6, "lidar_status": "FAIL", "comm_latency_ms": 66.2}}
+{"timestamp": "2025-11-06T16:12:38.796178+00:00", "source": "uv02", "type": "telemetry", "details": {"speed_kph": 39.7, "gps": [42.337716, -71.245329], "battery_percent": 85.8, "lidar_status": "OK", "comm_latency_ms": 72.2}}
+{"timestamp": "2025-11-06T16:12:40.810802+00:00", "source": "uv01", "type": "telemetry", "details": {"speed_kph": 42.8, "gps": [42.33062, -71.248556], "battery_percent": 85.9, "lidar_status": "FAIL", "comm_latency_ms": 52.5}}
+{"timestamp": "2025-11-06T16:12:42.834283+00:00", "source": "uv02", "type": "telemetry", "details": {"speed_kph": 34.1, "gps": [42.337939, -71.243964], "battery_percent": 88.0, "lidar_status": "OK", "comm_latency_ms": 59.5}}
+{"timestamp": "2025-11-06T16:12:44.856087+00:00", "source": "uv01", "type": "telemetry", "details": {"speed_kph": 54.8, "gps": [42.336284, -71.243943], "battery_percent": 72.6, "lidar_status": "FAIL", "comm_latency_ms": 104.6}}
+{"timestamp": "2025-11-06T16:12:46.874643+00:00", "source": "uv02", "type": "telemetry", "details": {"speed_kph": 43.8, "gps": [42.336907, -71.24648], "battery_percent": 93.9, "lidar_status": "OK", "comm_latency_ms": 77.4}}
+{"timestamp": "2025-11-06T16:12:48.897677+00:00", "source": "uv01", "type": "telemetry", "details": {"speed_kph": 47.7, "gps": [42.33193, -71.248586], "battery_percent": 86.0, "lidar_status": "OK", "comm_latency_ms": 53.5}}
+{"timestamp": "2025-11-06T16:12:50.915660+00:00", "source": "uv02", "type": "telemetry", "details": {"speed_kph": 53.5, "gps": [42.339296, -71.246131], "battery_percent": 82.3, "lidar_status": "OK", "comm_latency_ms": 89.8}}
+{"timestamp": "2025-11-06T16:12:52.919778+00:00", "source": "uv01", "type": "telemetry", "details": {"speed_kph": 45.8, "gps": [42.332843, -71.248398], "battery_percent": 86.1, "lidar_status": "FAIL", "comm_latency_ms": 69.9}}
+{"timestamp": "2025-11-06T16:12:54.938957+00:00", "source": "uv02", "type": "telemetry", "details": {"speed_kph": 57.9, "gps": [42.338554, -71.243717], "battery_percent": 87.7, "lidar_status": "OK", "comm_latency_ms": 88.3}}
+{"timestamp": "2025-11-06T16:12:56.943733+00:00", "source": "uv01", "type": "telemetry", "details": {"speed_kph": 22.9, "gps": [42.334752, -71.246778], "battery_percent": 76.2, "lidar_status": "OK", "comm_latency_ms": 74.7}}
