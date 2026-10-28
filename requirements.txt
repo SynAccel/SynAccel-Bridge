@@ -5,3 +5,4 @@ python-dotenv
 pytest
 httpx
 jinja2
+requests

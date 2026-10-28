@@ -55,6 +55,8 @@ Device or Client  --->  SynAccel-Bridge API  --->  logs/events_log.jsonl
 
 - Set `NONCE_DB_PATH` (e.g. `logs/nonces.db`) in `.env` to keep replay protection across restarts
 
+Run the vehicle feed with `python -m src.telemetry.vehicle_feed_simulator --spike-chance 0.05` to inject occasional anomalous speeds.
+
 ### Running tests
 
 ```

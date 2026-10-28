@@ -1,3 +1,4 @@
+import argparse
 import os
 import json
 import time
@@ -24,7 +25,7 @@ HEADERS = {
 
 VEHICLES = ["uv01", "uv02"]
 
-def generate_payload(vehicle_id: str) -> dict:
+def generate_payload(vehicle_id: str, spike_chance: float = 0.0) -> dict:
     """Generate random telemetry for a vehicle and sign it."""
     details = {
         "speed_kph": round(random.uniform(20, 60), 1),
@@ -36,6 +37,10 @@ def generate_payload(vehicle_id: str) -> dict:
         "lidar_status": random.choice(["OK", "OK", "FAIL"]),
         "comm_latency_ms": round(random.uniform(40, 130), 1),
     }
+
+    # occasional implausible reading to exercise the anomaly detector
+    if random.random() < spike_chance:
+        details["speed_kph"] = round(random.uniform(140, 200), 1)
 
     event = {
         "device_id": vehicle_id,
@@ -69,11 +74,16 @@ def send_event(event: dict):
     )
 
 def main():
+    parser = argparse.ArgumentParser(description="Signed vehicle telemetry simulator")
+    parser.add_argument("--spike-chance", type=float, default=0.0,
+                        help="probability (0-1) of an anomalous speed reading per event")
+    args = parser.parse_args()
+
     print("Starting vehicle simulator (signed events)...")
     while True:
         for v in VEHICLES:
             try:
-                event = generate_payload(v)
+                event = generate_payload(v, args.spike_chance)
                 send_event(event)
             except Exception as e:
                 print(f"[ERROR] {v}: {e}")
