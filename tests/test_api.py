@@ -76,3 +76,7 @@ def test_intrusion_spike_raises_alert_and_risk(client):
     assert last["alerts_triggered"] >= 1
     risk = client.get("/api/risk", headers=H).json()
     assert risk and risk[0]["source"] == "door_A1" and risk[0]["score"] > 0
+
+
+def test_dashboard_risk_endpoint(client):
+    assert isinstance(client.get("/dashboard/risk").json(), list)

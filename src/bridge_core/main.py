@@ -14,10 +14,11 @@ from typing import Dict
 
 from src.intelligence.correlation_engine import correlate_events
 from src.intelligence.anomaly import EwmaDetector
-from src.intelligence.risk import RiskScorer
+from src.intelligence.risk import scorer as risk_scorer
 from src.ui.dashboard import router as dashboard_router
 from src.security.signing import verify_event
 from src.security.replay import NonceCache
+from src.security.replay_store import SqliteNonceCache
 
 # ---------- Load environment variables ----------
 ENV_PATH = Path(__file__).resolve().parents[2] / ".env"   # repo root/.env
@@ -30,9 +31,13 @@ DEVICE_SECRETS: Dict[str, str] = json.loads(raw_secrets) if raw_secrets else {}
 print("Loaded DEVICE_SECRETS keys:", list(DEVICE_SECRETS.keys()))
 
 MAX_SKEW_SECONDS = int(os.getenv("MAX_SKEW_SECONDS", "300"))
-nonce_cache = NonceCache(max_per_device=2000)
+NONCE_DB_PATH = os.getenv("NONCE_DB_PATH")  # set to persist nonces across restarts
+nonce_cache = (
+    SqliteNonceCache(NONCE_DB_PATH, ttl_seconds=MAX_SKEW_SECONDS * 2)
+    if NONCE_DB_PATH
+    else NonceCache(max_per_device=2000)
+)
 anomaly_detector = EwmaDetector()
-risk_scorer = RiskScorer()
 ANOMALY_METRICS = ("speed_kph", "battery_percent")
 
 # ---------- Create app ----------

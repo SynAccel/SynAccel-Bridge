@@ -45,3 +45,7 @@ class RiskScorer:
             for s in self._scores
         ]
         return sorted(rows, key=lambda r: r["score"], reverse=True)
+
+
+# shared instance used by the API and the dashboard
+scorer = RiskScorer()

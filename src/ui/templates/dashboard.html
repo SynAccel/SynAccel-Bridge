@@ -97,11 +97,19 @@
     </table>
   </div>
 
+  <section id="risk-section">
+    <h2>Source Risk</h2>
+    <table>
+      <thead><tr><th>Source</th><th>Score</th><th>Level</th></tr></thead>
+      <tbody id="risk-body"><tr><td colspan="3">No risk data yet</td></tr></tbody>
+    </table>
+  </section>
+
   <!-- Live Alerts Panel -->
   <section id="alerts-section" style="margin-top: 20px;">
     <h2>Active Alerts (Live Feed)</h2>
-    <table id="alerts-table" border="1" cellspacing="0" cellpadding="6" width="100%">
-      <thead style="background-color: #333; color: white;">
+    <table id="alerts-table">
+      <thead>
         <tr>
           <th>Timestamp</th>
           <th>Source</th>
@@ -114,74 +122,83 @@
         </tr>
       </thead>
       <tbody id="alerts-body">
-        <tr><td colspan="5">Loading alerts...</td></tr>
+        <tr><td colspan="8">Loading alerts...</td></tr>
       </tbody>
     </table>
   </section>
 
-  <!-- ======= Live Data Script ======= -->
   <script>
+  const SEVERITY_COLORS = { high: "#ff5050", medium: "orange" };
+  const LEVEL_COLORS = { critical: "#ff4d4d", high: "#ff8c42", elevated: "#ffae42", normal: "#1f8b4c" };
+
+  // textContent keeps device-supplied strings from being parsed as HTML
+  function addRow(tbody, values, colorByIndex = {}) {
+    const row = document.createElement("tr");
+    values.forEach((v, i) => {
+      const td = document.createElement("td");
+      td.textContent = v ?? "N/A";
+      if (colorByIndex[i]) { td.style.color = colorByIndex[i]; td.style.fontWeight = "bold"; }
+      row.appendChild(td);
+    });
+    tbody.appendChild(row);
+  }
+
   async function loadAlerts() {
     try {
-      const response = await fetch("/api/alerts");
-      const alerts = await response.json();
-      console.log("Fetched alerts:", alerts);
-
+      const alerts = await (await fetch("/api/alerts")).json();
       const tbody = document.getElementById("alerts-body");
       const statusBar = document.getElementById("status-bar");
       tbody.innerHTML = "";
 
       if (alerts.length === 0) {
-        tbody.innerHTML = '<tr><td colspan="5">No active alerts</td></tr>';
+        tbody.innerHTML = '<tr><td colspan="8">No active alerts</td></tr>';
         statusBar.className = "normal";
         statusBar.textContent = "Bridge Status: NORMAL";
         return;
       }
 
-      // Determine the highest severity
-      const severities = alerts.map(a => a.severity.toLowerCase());
+      const severities = alerts.map(a => String(a.severity).toLowerCase());
       let status = "normal";
       if (severities.includes("high")) status = "alert";
       else if (severities.includes("medium")) status = "warning";
-
-      // Update status bar color and text
       statusBar.className = status;
-      statusBar.textContent =
-        status === "alert"
-          ? "Bridge Status: ALERT MODE"
-          : status === "warning"
-          ? "Bridge Status: WARNING"
-          : "Bridge Status: NORMAL";
+      statusBar.textContent = {
+        alert: "Bridge Status: ALERT MODE",
+        warning: "Bridge Status: WARNING",
+        normal: "Bridge Status: NORMAL",
+      }[status];
 
-      // Show the last 20 alerts
       alerts.slice(-20).reverse().forEach(a => {
-        const row = document.createElement("tr");
-        const color =
-          a.severity === "high"
-            ? "rgb(255, 80, 80)"
-            : a.severity === "medium"
-            ? "orange"
-            : "lightgreen";
-
-        row.innerHTML = `
-  <td>${a.timestamp}</td>
-  <td>${a.source}</td>
-  <td>${a.type}</td>
-  <td style="font-weight:bold; color:${color};">${a.severity.toUpperCase()}</td>
-  <td>${a.lidar_status || "N/A"}</td>
-  <td>${a.speed_kph || "N/A"}</td>
-  <td>${a.battery_percent || "N/A"}</td>
-  <td>${a.message}</td>
-`;
-
+        const sev = String(a.severity).toLowerCase();
+        addRow(
+          tbody,
+          [a.timestamp, a.source, a.type, sev.toUpperCase(), a.message, a.lidar_status, a.speed_kph, a.battery_percent],
+          { 3: SEVERITY_COLORS[sev] || "lightgreen" }
+        );
+      });
     } catch (err) {
       console.error("Error loading alerts:", err);
     }
   }
 
-  // Refresh every 3 seconds
-  setInterval(loadAlerts, 3000);
-  loadAlerts();
+  async function loadRisk() {
+    try {
+      const rows = await (await fetch("/dashboard/risk")).json();
+      const tbody = document.getElementById("risk-body");
+      tbody.innerHTML = "";
+      if (rows.length === 0) {
+        tbody.innerHTML = '<tr><td colspan="3">No risk data yet</td></tr>';
+        return;
+      }
+      rows.forEach(r => addRow(tbody, [r.source, r.score, r.level.toUpperCase()], { 2: LEVEL_COLORS[r.level] }));
+    } catch (err) {
+      console.error("Error loading risk:", err);
+    }
+  }
+
+  function refresh() { loadAlerts(); loadRisk(); }
+  setInterval(refresh, 3000);
+  refresh();
   </script>
 </body>
 </html>

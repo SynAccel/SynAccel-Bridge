@@ -4,6 +4,8 @@ from fastapi.responses import HTMLResponse
 from pathlib import Path
 import json
 
+from src.intelligence.risk import scorer
+
 router = APIRouter(prefix="/dashboard", tags=["Dashboard"])
 templates = Jinja2Templates(directory="src/ui/templates")
 
@@ -32,3 +34,8 @@ def dashboard(request: Request):
             "events": events,
         }
     )
+
+@router.get("/risk")
+def risk():
+    """Risk snapshot for the dashboard panel."""
+    return scorer.snapshot()
