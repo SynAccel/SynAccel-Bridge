@@ -1,5 +1,7 @@
 # SynAccel-Bridge
 
+![tests](https://github.com/SynAccel/SynAccel-Bridge/actions/workflows/tests.yml/badge.svg)
+
 SynAccel-Bridge is the starting point for building a **cyber-physical event bridge** — a system that connects digital security platforms (like cloud or SOC systems) with physical and automated systems (like sensors, access controllers, or robotics).
 
 The main goal is to learn and design how **real-time data** from both cyber and physical sources can be received, validated, and processed securely.  
@@ -50,6 +52,8 @@ Device or Client  --->  SynAccel-Bridge API  --->  logs/events_log.jsonl
 - `GET /api/risk` - current risk score and level per source (API key required)
 - Rule 5 (`telemetry_anomaly`): learns a rolling baseline per source/metric and alerts on outliers
 - API key comparison is now constant-time, and secrets are no longer printed at startup
+
+- Set `NONCE_DB_PATH` (e.g. `logs/nonces.db`) in `.env` to keep replay protection across restarts
 
 ### Running tests
 
