@@ -27,13 +27,7 @@ def dashboard(request: Request):
     # Reverse so newest are on top
     events = events[::-1][:30]
 
-    return templates.TemplateResponse(
-        "dashboard.html",
-        {
-            "request": request,
-            "events": events,
-        }
-    )
+    return templates.TemplateResponse(request, "dashboard.html", {"events": events})
 
 @router.get("/risk")
 def risk():

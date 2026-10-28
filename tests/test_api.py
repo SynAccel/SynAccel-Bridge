@@ -80,3 +80,17 @@ def test_intrusion_spike_raises_alert_and_risk(client):
 
 def test_dashboard_risk_endpoint(client):
     assert isinstance(client.get("/dashboard/risk").json(), list)
+
+
+def test_dashboard_page_renders(client, monkeypatch):
+    from pathlib import Path
+
+    # templates are resolved relative to the repo root, not the temp cwd
+    from src.ui import dashboard
+    from fastapi.templating import Jinja2Templates
+
+    root = Path(__file__).resolve().parents[1]
+    monkeypatch.setattr(dashboard, "templates", Jinja2Templates(directory=str(root / "src/ui/templates")))
+    r = client.get("/dashboard/")
+    assert r.status_code == 200
+    assert "Source Risk" in r.text
