@@ -40,7 +40,23 @@ Device or Client  --->  SynAccel-Bridge API  --->  logs/events_log.jsonl
 | **Adaptive Responses** | Prints “isolation” or “diagnostic” actions                    | Done |
 | **Cooldown Logic**     | Prevents spammy re-alerts, makes system time-aware            | Done |
 | **Simulated Feed**     | `sensor_simulator.py` continuously generates events           | Done |
+| **Anomaly Detection**  | Per-source EWMA baseline on speed/battery, flags >4 sigma     | Done |
+| **Risk Scoring**       | Alerts add weight per source; score decays (5 min half-life)  | Done |
 
+
+### New in v0.3
+
+- `GET /health` - liveness check
+- `GET /api/risk` - current risk score and level per source (API key required)
+- Rule 5 (`telemetry_anomaly`): learns a rolling baseline per source/metric and alerts on outliers
+- API key comparison is now constant-time, and secrets are no longer printed at startup
+
+### Running tests
+
+```
+pip install -r requirements.txt
+python -m pytest -q
+```
 
 ### Next Steps
 
